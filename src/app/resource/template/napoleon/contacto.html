@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New contact message</title>
+</head>
+
+<body style="margin:0;padding:0;background-color:#f7f5f1;font-family:Arial,Helvetica,sans-serif;">
+
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+        style="background:#f7f5f1;padding:40px 15px;">
+        <tr>
+            <td align="center">
+
+                <!-- Container -->
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="650"
+                    style="max-width:650px;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e7d6af;">
+
+                    <!-- Header -->
+                    <tr>
+                        <td align="center" bgcolor="#d7a952" style="padding:35px 30px;">
+
+                            <h1 style="margin:0;font-size:30px;color:#ffffff;font-weight:bold;">
+                                {{.Company}}
+                            </h1>
+
+                            <p style="margin:12px 0 0 0;font-size:16px;color:#fff8e8;">
+                                📩 New message received from the web form
+                            </p>
+
+                        </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding:40px;">
+
+                            <h2 style="margin-top:0;color:#3b3122;">
+                                Hello,
+                            </h2>
+
+                            <p style="font-size:15px;color:#5d5345;line-height:1.6;">
+                                A new message has been received from the contact form of
+                                <strong>{{.Company}}</strong>.
+                            </p>
+
+                            <!-- Details -->
+                            <table role="presentation" width="100%" cellpadding="12" cellspacing="0"
+                                style="margin-top:30px;border-collapse:collapse;border:1px solid #e7d6af;">
+
+                                <tr style="background:#fcf8ef;">
+                                    <td width="180" style="font-weight:bold;color:#3b3122;">
+                                        Company
+                                    </td>
+
+                                    <td style="color:#5d5345;">
+                                        {{.Company}}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="font-weight:bold;color:#3b3122;">
+                                        Name
+                                    </td>
+
+                                    <td style="color:#5d5345;">
+                                        {{.Name}}
+                                    </td>
+                                </tr>
+
+                                <tr style="background:#fcf8ef;">
+                                    <td style="font-weight:bold;color:#3b3122;">
+                                        Email
+                                    </td>
+
+                                    <td style="color:#5d5345;">
+                                        {{.Email}}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="font-weight:bold;color:#3b3122;">
+                                        Recipient
+                                    </td>
+
+                                    <td style="color:#5d5345;">
+                                        {{.To}}
+                                    </td>
+                                </tr>
+
+                                <tr style="background:#fcf8ef;">
+                                    <td style="font-weight:bold;color:#3b3122;">
+                                        Subject
+                                    </td>
+
+                                    <td style="color:#5d5345;">
+                                        {{.Subject}}
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                            <!-- Message -->
+                            <h3 style="margin:35px 0 15px;color:#3b3122;">
+                                Message
+                            </h3>
+
+                            <div style="
+                            background:#fcf8ef;
+                            border-left:5px solid #d7a952;
+                            padding:20px;
+                            color:#5d5345;
+                            font-size:15px;
+                            line-height:1.8;
+                            white-space:pre-wrap;
+                            border-radius:8px;">
+                                {{.Message}}
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="padding:30px;background:#faf7f1;border-top:1px solid #e7d6af;">
+
+                            <p style="margin:0;font-size:14px;color:#5d5345;">
+                                This email was automatically generated from the contact form of
+                                <strong>{{.Company}}</strong>.
+                            </p>
+
+                            <p style="margin:12px 0 0;font-size:12px;color:#8d826d;">
+                                Please do not reply directly to this email.
+                            </p>
+
+                        </td>
+                    </tr>
+
+                </table>
+
+                <!-- Footer bottom -->
+                <table role="presentation" cellpadding="0" cellspacing="0" width="650" style="margin-top:20px;">
+                    <tr>
+                        <td align="center">
+
+                            <p style="font-size:12px;color:#9b917c;">
+                                © {{.Year}} {{.Company}}. All rights reserved.
+                            </p>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

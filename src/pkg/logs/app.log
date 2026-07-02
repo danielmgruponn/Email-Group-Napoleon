@@ -1,0 +1,6 @@
+{"level":"info","msg":"Logger Inizialitation","time":"2026-07-01 11:53:09"}
+{"action":"server_starting","data":null,"level":"info","msg":"server starting","time":"2026-07-01 11:53:09","user":0}
+{"action":"signal_received","data":"interrupt","level":"info","msg":"signal received, shutting down","time":"2026-07-01 14:59:02","user":0}
+{"level":"info","msg":"Logger Inizialitation","time":"2026-07-01 14:59:54"}
+{"action":"server_starting","data":null,"level":"info","msg":"server starting","time":"2026-07-01 14:59:54","user":0}
+{"action":"signal_received","data":"interrupt","level":"info","msg":"signal received, shutting down","time":"2026-07-01 15:29:43","user":0}
