@@ -14,6 +14,7 @@ import (
 
 	"cloud.google.com/go/firestore"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/spf13/cobra"
 )
 
@@ -33,6 +34,14 @@ var RunServerCmd = &cobra.Command{
 			WriteTimeout: 10 * time.Second,
 			IdleTimeout:  60 * time.Second,
 		})
+
+		app.Use(cors.New(cors.Config{
+			AllowOrigins:     "http://localhost:5500, http://localhost:3000, http://127.0.0.1:5500",
+			AllowMethods:     "GET,POST,OPTIONS",
+			AllowHeaders:     "Content-Type,Authorization",
+			AllowCredentials: true,
+		}))
+
 		routes.Router(app)
 		StartServer(app, ":"+port, firestore)
 	},
