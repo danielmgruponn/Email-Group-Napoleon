@@ -23,7 +23,7 @@ func EmailGroupNapoleonTo() string { return env("EMAIL_GROUP_NAPOLEON_TO", "") }
 func EmailNapoleonMineTo() string { return env("EMAIL_NAPOLEON_MINE_TO", "") }
 func EmailBankGoldTo() string { return env("EMAIL_BANK_GOLD_TO", "") }
 func CorsAllowOrigins() string {
-	return env("CORS_ALLOW_ORIGINS", "http://localhost:5500, http://localhost:3000, http://localhost:5173, https://www.bankgold.co")
+	return env("CORS_ALLOW_ORIGINS", "http://localhost:5500, http://localhost:3000, http://127.0.0.1:5500, http://localhost:5173")
 }
 
 var envLoaded = false
