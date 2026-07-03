@@ -38,7 +38,7 @@ var RunServerCmd = &cobra.Command{
 		app.Use(cors.New(cors.Config{
 			AllowOrigins:     "http://localhost:5500, http://localhost:3000, http://127.0.0.1:5500, http://localhost:5173",
 			AllowMethods:     "GET,POST,OPTIONS",
-			AllowHeaders:     "Content-Type,Authorization",
+			AllowHeaders:     "Content-Type,Authorization,language-iso",
 			AllowCredentials: true,
 		}))
 
